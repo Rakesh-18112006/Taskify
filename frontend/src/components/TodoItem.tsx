@@ -11,7 +11,7 @@ interface Props {
   setCoins: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const TodoItem = ({ todo, Todos, setTodos, coins , setCoins }: Props) => {
+const TodoItem = ({ todo, Todos, setTodos , setCoins }: Props) => {
   const [edit, setEdit] = useState<boolean>(false);
   const [editText, setEditText] = useState<string>(todo.todo);
 
