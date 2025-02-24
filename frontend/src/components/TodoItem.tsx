@@ -1,7 +1,9 @@
 import { Todo } from "./Model";
 import { useState } from "react";
-import { FiTrash2, FiEdit3, FiCheckCircle } from "react-icons/fi"; // Feather Icons
- // Import Google Font
+import { FiTrash2, FiEdit3, FiCheckCircle } from "react-icons/fi";
+
+// Import Google Font (Should be added in index.css or global CSS file)
+import "../index.css"; 
 
 interface Props {
   todo: Todo;
@@ -11,7 +13,7 @@ interface Props {
   setCoins: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const TodoItem = ({ todo, Todos, setTodos , setCoins }: Props) => {
+const TodoItem = ({ todo, Todos, setTodos, setCoins }: Props) => {
   const [edit, setEdit] = useState<boolean>(false);
   const [editText, setEditText] = useState<string>(todo.todo);
 
@@ -21,7 +23,7 @@ const TodoItem = ({ todo, Todos, setTodos , setCoins }: Props) => {
     );
 
     if (!todo.isDone) {
-     setCoins((prev :number) => prev + 10);
+      setCoins((prev: number) => prev + 10);
     }
   };
 
@@ -36,18 +38,18 @@ const TodoItem = ({ todo, Todos, setTodos , setCoins }: Props) => {
   };
 
   return (
-    <div className=" mt-7 flex items-center justify-between bg-gray-900 text-white px-6 py-5 rounded-lg shadow-lg mb-4 border border-gray-700 w-full max-w-3xl transition-all duration-300 hover:shadow-xl hover:scale-102   mx-auto">
+    <div className="mt-7 flex items-center justify-between bg-gray-900 text-white px-6 py-5 rounded-lg shadow-lg mb-4 border border-gray-700 w-full max-w-3xl transition-all duration-300 hover:shadow-xl hover:scale-[1.02] mx-auto">
       <form onSubmit={(e) => handleEdit(e, todo.id)} className="flex-1">
         {edit ? (
           <input
             type="text"
             value={editText}
             onChange={(e) => setEditText(e.target.value)}
-            className="w-full bg-gray-800 text-white px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-300 font-[Poppins] text-lg"
+            className="w-full bg-gray-800 text-white px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-300 font-[Nerko One] text-lg"
           />
         ) : (
           <span
-            className={`text-lg font-medium font-[Poppins] transition-all duration-300 ${
+            className={`text-lg font-medium font-[Satisfy] transition-all duration-300 ${
               todo.isDone ? "line-through text-gray-500" : "text-white"
             }`}
           >
