@@ -10,7 +10,7 @@ const TelegramLogin: React.FC = () => {
       script.async = true;
       script.setAttribute("data-telegram-login", "rakhi369_bot"); // Replace with your bot username
       script.setAttribute("data-size", "large");
-      script.setAttribute("data-auth-url", "https://telegram-auth-3ldq499xw-rakesh-18112006s-projects.vercel.app//auth");
+      script.setAttribute("data-auth-url", "https://telegram-auth-3ldq499xw-rakesh-18112006s-projects.vercel.app/auth");
       script.setAttribute("data-request-access", "write");
       script.setAttribute("data-userpic", "true");
       script.setAttribute("data-radius", "10");
