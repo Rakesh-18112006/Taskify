@@ -10,7 +10,7 @@ const TelegramLogin: React.FC = () => {
       script.async = true;
       script.setAttribute("data-telegram-login", "rakhi3690Bot"); // Replace with your bot name
       script.setAttribute("data-size", "large");
-      script.setAttribute("data-auth-url", "https://eba5-2401-4900-4e1b-f97e-79af-72ac-3aa1-6ec2.ngrok-free.app/auth");
+      script.setAttribute("data-auth-url", "https://9238-2409-40f0-3036-cf56-25d9-2fc3-ad5d-1519.ngrok-free.app/auth");
       script.setAttribute("data-request-access", "write");
 
       container.appendChild(script);
